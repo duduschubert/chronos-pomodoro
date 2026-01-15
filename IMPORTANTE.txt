@@ -1,0 +1,56 @@
+!!!!ESTADO E PROBLEMA DE EFEITO COLATERAL NO REACT!!!!
+
+import { useState } from 'React';
+
+export function App() {
+  
+  {/*
+    PROCESSO 1:   
+  let numero = 0; DEFINE A VARIÁVEL COMO 0
+
+  function handleClick() {
+    const span = ducument.getElementbyId('numero');
+
+    if(!span) return; - SE 'SPAN' NÃO EXISTIR, NÃO RETORNA NADA, SE EXISTIR INCREMENTA 
+
+    numero += 1 - INCREMENTO DA VARIÁVEL
+    span.innerText = numero.toString(); JOGA A MUDANÇA DA VARIÁVEL EM TELA CONVERTENDO PARA STRING
+    console.log(numero, Date.now())  - ATUALIZA DENTRO DO LOG 
+    
+    ISSO TUDO É UM ESTADO DE EFEITO COLATERAL, TUDO ISSO ACONTECE FORA DO JSX, FORA DO REACT, POIS, REACT NÃO SINCRONIZA
+    ATUALIZAÇÕES DE VARIÁVEL EM TELA A NÃO SER QUE SEJA SINCRONIZADO A MUDANÇA NO CONSOLE PARA TELA. 
+
+    LEMBRANDO, TUDO ISSO É JAVASCRIPT E NÃO MUDA O VALOR DA VARIÁVEL SEMPRE QUE ELA É DECLARADA, PARA ISSO USAMOS UM PROCESSO 2, QUE É O MAIS SIMPLES E IDEAL PARA REACT!!!
+
+    PROCESSO 2: 
+    
+    REGRA 1: "SEMPRE QUE USAR useState, não usar atribuição diretamente, ou seja, não usar '=' 
+
+    REGRA 2: para a nomenclatura da função, usamos 'set' + 'nome da variável em Camel Case'
+
+    REGRA 3: SEMPRE QUE O VALOR DA FUNÇÃO DEPENDER DO VALOR DA VARIÁVEL, DEVEMOS USAR UMA FUNÇÃO E NÃO ATRIBUIR 'NUMERO + 1' POR EXEMPLO, POR QUE QUANDO CHAMAMOS A VARIÁVEL ELA NÃO SALVA NA MEMÓRIA O ESTADO ANTERIOR, PARA ISSO, USAMOS prevState. OUTRO PROBLEMA DE CHAMARMOS A VARIÁVEL É QUE A EXECUÇÃO NÃO É FEITA DE IMEDIATO PELO REACT, ELE AGUARDA A RENDERIZAÇÃO DE TODO O COMPONENTE PARA EXECUTAR A FUNÇÃO.
+
+      const [numero], configurarNumero] = useState(0);
+
+      function handleClick() {
+        configurarNumero (numero + 1)/ } não fazer assim!!!
+
+      function handleClick() {
+        setNumero (prevState => prevState + 1); } 
+
+
+      UM MODO MELHOR E MAIS OTIMIZADO SERÁ ATRIBUIR UMA FUNÇÃO DENTRO DA CRIAÇÃO DA VARIÁVEL, ISSO FARÁ COM QUE ADIANTE (ou postergue) a criação de um valor até o momento em que ele realmente é necessário, em vez de calcular tudo logo na primeira renderização. ESSE MÉTODO É CHAMADO DE LAZY INITIALIZATION, ELE GARANTE QUE O VALOR INICIAL NÃO SEJA RECALCULADO À TOA principalmente para melhorar performance e evitar trabalho desnecessário;
+
+        const [numero], setNumero] = useState(() => {
+          console.log('Lazy initialization')}
+          return 0; 
+        });
+
+    */}
+  
+
+  return (
+    <>
+      {/*<Heading>Número: <span id='numero'> {numero}</span> <Heading/>
+        <button onClick = {handleClick}> Aumenta </button> */}
+      
