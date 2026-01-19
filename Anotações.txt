@@ -1,0 +1,20 @@
+import type { TaskModel } from './taskModel';
+
+// Estado -> Componente -> Repassar para componentes filhos
+
+export type TaskStateMiodel = {
+  tasks: [TaskModel]; // Histórico, MainForm e etc
+  
+  // Estados que gerenciam o Timer 
+  secondsRemaining: number; // Home, CountDown, Histórico, MainForm, Button
+  formattedSecondsRemaining: string; // Title, CountDown
+  activeTask: TaskModel | null; // CountDown, Histórico, MainForm, Button
+  currentCycle: number; // Home - numero de 1 a 8 que contam os ciclos do Pomodoro
+  
+  
+  config: {
+    workTime: number; // MainForm
+    shortBreakTime: number; // MainForm
+    longBreakTime: number; // MainForm
+  };
+};

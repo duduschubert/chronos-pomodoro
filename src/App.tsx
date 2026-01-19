@@ -1,4 +1,4 @@
-import { Home } from './pages/Home/index.tsx';
+import { Home } from './pages/Home';
 
 import './styles/theme.css';
 import './styles/global.css';

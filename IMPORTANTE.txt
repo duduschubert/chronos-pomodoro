@@ -54,3 +54,18 @@ export function App() {
       {/*<Heading>Número: <span id='numero'> {numero}</span> <Heading/>
         <button onClick = {handleClick}> Aumenta </button> */}
       
+
+
+      COMENTÁRIOS MENU:
+         // document.documentElement.setAttribute('data-theme', theme);
+  }
+
+  /*useEffect(() => {
+  console.log('useEffect sem dependência', Date.now());
+})*/
+
+  /* useEffect(() => {
+  console.log('useEffect com array de deps vazio', Date.now()); //executa apenas quando o React monta o componente pela primeira vez!!! Essa prática é muito boa quando você quer buscar dados de uma API externa, quando o componente carrega você puxará os dados e joga em tela e caso o componente necessite de renderizar, este processo não necessitará de ser feito novamente.
+}, []);*/
+
+// array de dependências, a função só será executada quando o valor da variável mudar, ou seja, dark para light!

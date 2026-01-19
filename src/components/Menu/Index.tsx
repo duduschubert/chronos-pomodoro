@@ -34,15 +34,6 @@ export function Menu() {
 
     // document.documentElement.setAttribute('data-theme', theme);
   }
-
-  /*useEffect(() => {
-  console.log('useEffect sem dependência', Date.now());
-})*/
-
-  /* useEffect(() => {
-  console.log('useEffect com array de deps vazio', Date.now()); //executa apenas quando o React monta o componente pela primeira vez!!! Essa prática é muito boa quando você quer buscar dados de uma API externa, quando o componente carrega você puxará os dados e joga em tela e caso o componente necessite de renderizar, este processo não necessitará de ser feito novamente.
-}, []);*/
-
   useEffect(() => {
     console.log('Theme mudou', theme, Date.now());
     document.documentElement.setAttribute('data-theme', theme);
